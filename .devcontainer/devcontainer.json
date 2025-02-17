@@ -1,0 +1,19 @@
+{
+  "name": "quail-view-vscode",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "ms-vscode.vscode-typescript-next"
+      ]
+    }
+  },
+  "remoteUser": "node",
+  "workspaceFolder": "/src",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/src,type=bind,consistency=cached"
+}
